@@ -57,4 +57,17 @@ return require('packer').startup(function(use)
         use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
         use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
         use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+        use {
+            "windwp/nvim-autopairs",
+            config = function() require("nvim-autopairs").setup {} end
+        }
+        use {
+            'nvim-tree/nvim-tree.lua',
+            requires = {
+                'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            },
+            tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        }
+        use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
     end)
