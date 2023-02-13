@@ -87,11 +87,4 @@ return require('packer').startup(function(use)
         
     end)
 
-if packer_bootstrap then
-  print '=================================='
-  print '    Plugins are being installed'
-  print '    Wait until Packer completes,'
-  print '       then restart nvim'
-  print '=================================='
-  return
-end
+
