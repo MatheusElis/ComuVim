@@ -1,6 +1,3 @@
 require("bufferline").setup{
-	options={numbers="buffer_id"}
+	options={numbers="number"}
 }
-  vim.keymap.set("n", "<S-Tab>", ":BufferLineCycleNext<CR>")
- 
-

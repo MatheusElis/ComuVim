@@ -61,13 +61,18 @@ return require('packer').startup(function(use)
             "windwp/nvim-autopairs",
             config = function() require("nvim-autopairs").setup {} end
         }
+        use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
         use {
-            'nvim-tree/nvim-tree.lua',
+            "nvim-neo-tree/neo-tree.nvim",
+            branch = "v2.x",
             requires = {
-                'nvim-tree/nvim-web-devicons', -- optional, for file icons
-            },
-            tag = 'nightly' -- optional, updated every week. (see issue #1193)
+                "nvim-lua/plenary.nvim",
+                "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+                "MunifTanjim/nui.nvim",
+            }
         }
-        use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+        use {
+            "folke/which-key.nvim",
+        }
     end)

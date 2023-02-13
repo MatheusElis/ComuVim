@@ -1,4 +1,8 @@
-require("nvim-tree").setup()
-
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-
+require("neo-tree").setup({
+		filesystem = {
+				filtered_items = {
+						hide_dotfiles = false,
+						hide_gitignored = false
+				}
+		}
+})
