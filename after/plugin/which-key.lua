@@ -13,7 +13,7 @@ wk.setup {
 
 local mappings = {
     ["<leader>"] = {
-      f = { name = "File" },
+      f = { name = "Fuzzy Finder" },
       p = { name = "Packages" },
       b = { name = "Buffers" },
       g = { name = "Git" },
