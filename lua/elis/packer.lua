@@ -2,6 +2,9 @@
 -- vim.cmd [[packadd packer.nvim]]
 
 
+local packer_bootstrap = ensure_packer()
+
+-- vim.cmd [[packadd packer.nvim]]
 
 
 return require('packer').startup(function(use)
@@ -78,9 +81,17 @@ return require('packer').startup(function(use)
         use {
             "folke/which-key.nvim",
         }
-        if is_bootstrap then
+        if packer_bootstrap then
             require('packer').sync()
         end
+        
     end)
 
-
+if packer_bootstrap then
+  print '=================================='
+  print '    Plugins are being installed'
+  print '    Wait until Packer completes,'
+  print '       then restart nvim'
+  print '=================================='
+  return
+end
