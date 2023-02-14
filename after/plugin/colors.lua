@@ -1,3 +1,4 @@
+if (vim.g.colors_name == "nord") then 
 function ColorMyPencils(color)
 	color = color or "nord"
 	vim.cmd.colorscheme(color)
@@ -7,3 +8,4 @@ function ColorMyPencils(color)
 end
 
 ColorMyPencils(color)
+end
