@@ -19,7 +19,7 @@ local servers = {
     -- pyright = {},
     -- rust_analyzer = {},
     -- tsserver = {},
-
+    --
     -- sumneko_lua = {
     --     Lua = {
     --         workspace = { checkThirdParty = false },
@@ -29,15 +29,22 @@ local servers = {
 }
 
 -- Setup neovim lua configuration
-require('neodev').setup()
+local ok_neodev, neodev = pcall(require, "neodev")
+if not ok_neodev then return end
+neodev.setup()
 
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+local ok_cmp_nvim_lsp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if not ok_cmp_nvim_lsp then return end
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 -- Setup mason so it can manage external tooling
-require('mason').setup()
+local ok_mason, mason = pcall(require, "mason")
+if not ok_mason then return end
+mason.setup()
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
@@ -57,7 +64,9 @@ mason_lspconfig.setup_handlers {
 }
 
 -- Turn on lsp status information
-require('fidget').setup()
+local ok_fidget, fidget = pcall(require, "fidget")
+if not ok_fidget then return end
+fidget.setup()
 
 -- nvim-cmp setup
 local cmp = require 'cmp'

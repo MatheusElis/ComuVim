@@ -1,4 +1,6 @@
-local wk = require("which-key")
+local ok_whichkey, wk = pcall(require, "which-key")
+if not ok_whichkey then return end
+
 wk.setup {
   plugins = {
     spelling = { enabled = true },
