@@ -9,7 +9,7 @@ ensure_packer = function()
   return false
 end
 local packer_bootstrap = ensure_packer()
-
+require("elis")
 if packer_bootstrap then
   print '=================================='
   print '    Plugins are being installed'
@@ -18,5 +18,4 @@ if packer_bootstrap then
   print '=================================='
   return
 end
-require("elis")
 
