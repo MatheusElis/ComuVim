@@ -84,11 +84,19 @@ map("n", "<leader>sm", function() require("telescope.builtin").man_pages() end, 
 map("n", "<leader>sr", function() require("telescope.builtin").registers() end,  "Search registers")
 map("n", "<leader>sk", function() require("telescope.builtin").keymaps() end,  "Search keymaps")
 map("n", "<leader>sc", function() require("telescope.builtin").commands() end,  "Search commands")
+map("n", "<leader>sP", function() require'telescope'.extensions.repo.list{} end, "Search Projects")
 end
 -- Stay in indent mode
 map("v", "<", "<gv",  "unindent line")
 map("v", ">", ">gv",  "indent line")
 
-
+local ok_session,  session = pcall(require, "persisted.nvim")
+if ok_session then
+map("n", "<leader>SS", "<cmd>SessionStart<CR>", "Session Start")
+map("n", "<leader>Ss", "<cmd>SessionStop<CR>", "Session Stop")
+map("n", "<leader>Sw", "<cmd>SessionSave<CR>", "Session Save")
+map("n", "<leader>Sl", "<cmd>SessionLoad<CR>", "Session Load")
+map("n", "<leader>Sd", "<cmd>SessionDelete<CR>", "Session Delete")
+end
 
 
