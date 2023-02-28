@@ -31,7 +31,7 @@ map("n", "<b", "<cmd>BufferLineMovePrev<cr>",  "Move buffer tab left")
 
 local ok, comment = pcall(require, "Comment")
 if ok then
-map("n", "<leader>/", function() comment.toggle.linewise.current() end,  "Comment line")
+map("n", "<leader>/", function() require('Comment.api').toggle.linewise.current() end,  "Comment line")
 map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", "Toggle comment line")
 end
 -- Comment
