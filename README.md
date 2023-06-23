@@ -23,6 +23,6 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 
 Clone the repository
 ```
-git clone https://github.com/MatheusElis/nvim-profile ~/.config/nvim
+git clone https://github.com/MatheusElis/ComuVim ~/.config/nvim
 nvim
 ```
