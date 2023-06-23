@@ -2,10 +2,10 @@ local ok_nvimtreesitterconfigs, nvimtreesitterconfigs = pcall(require, "nvim-tre
 if not ok_nvimtreesitterconfigs then return end
 nvimtreesitterconfigs.setup {
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "help","python", "go" ,"c", "lua", "vim", "javascript", "typescript" },
+  ensure_installed = { "python", "go" ,"c", "lua", "vim", "javascript", "typescript" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
 
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
