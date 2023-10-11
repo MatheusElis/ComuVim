@@ -21,7 +21,7 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' }, { "kdheepak/lazygit.nvim" } },
         config = function()
@@ -76,7 +76,8 @@ require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
-    use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+    use { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+    -- use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
     use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
     use {
@@ -98,10 +99,10 @@ require('packer').startup(function(use)
         "folke/which-key.nvim",
     }
     use 'cljoly/telescope-repo.nvim'
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
+    -- use {
+    --     'nvim-telescope/telescope.nvim',
+    --     requires = { { 'nvim-lua/plenary.nvim' } }
+    -- }
     use({
         "olimorris/persisted.nvim",
         --module = "persisted", -- For lazy loading
