@@ -14,8 +14,8 @@ map("n", "\\", "<cmd>split<cr>", "Horizontal Split")
 
 -- Manage Buffers
 map("n", "<leader>bn", "<CMD>enew<CR>", "New File")
-map("n", "<leader>bc", "<cmd>bdelete<CR>", "Close buffer")
-map("n", "<leader>bC", "<cmd>bdelete!<CR>", "Force close buffer")
+map("n", "<leader>bc", "<cmd>bdelete<CR>", "Close buffer!")
+map("n", "<leader>bC", "<cmd>bdelete!<CR>", "Force close buffer!")
 map("n", "<S-Tab>", ":BufferLineCycleNext<CR>", "Next Buffer")
 map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", "Next buffer tab")
 map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", "Previous buffer tab")
