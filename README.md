@@ -14,6 +14,12 @@
 
 ## Installation
 
+### Dependencies
+
+- fd[https://github.com/sharkdp/fd]
+- ripgrep[https://github.com/BurntSushi/ripgrep]
+- treesitter-cli[https://www.npmjs.com/package/tree-sitter-cli]
+
 Make a backup of your current nvim and shared folder
 
 ```
