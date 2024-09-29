@@ -4,11 +4,6 @@ end
 
 -- Normal Keymaps --
 
-map("n", "<leader>w", "<CMD>w<CR>", "Save File")
-map("n", "<leader>q", "<CMD>q<CR>", "Quit Editor")
-map("n", "<leader>w", "<CMD>w<CR>", "Save File")
-map("n", "<C-s>", "<cmd>w!<cr>", "Force write")
-map("n", "<C-q>", "<cmd>q!<cr>", "Force quit")
 map("n", "|", "<cmd>vsplit<cr>", "Vertical Split")
 map("n", "\\", "<cmd>split<cr>", "Horizontal Split")
 
@@ -25,3 +20,9 @@ map("n", "<b", "<cmd>BufferLineMovePrev<cr>", "Move buffer tab left")
 -- Stay in indent mode
 map("v", "<", "<gv", "unindent line")
 map("v", ">", ">gv", "indent line")
+
+-- Navigation
+map('n', '<C-h>', '<C-w><C-h>','Move focus to the left window')
+map('n', '<C-l>', '<C-w><C-l>','Move focus to the right window')
+map('n', '<C-j>', '<C-w><C-j>','Move focus to the lower window')
+map('n', '<C-k>', '<C-w><C-k>','Move focus to the upper window')
