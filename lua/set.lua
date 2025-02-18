@@ -9,7 +9,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- Make line numbers default
 vim.wo.number = true
