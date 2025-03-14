@@ -26,3 +26,8 @@ map('n', '<C-h>', '<C-w><C-h>','Move focus to the left window')
 map('n', '<C-l>', '<C-w><C-l>','Move focus to the right window')
 map('n', '<C-j>', '<C-w><C-j>','Move focus to the lower window')
 map('n', '<C-k>', '<C-w><C-k>','Move focus to the upper window')
+
+map("x", "<leader>p", [["_dP"]], 'Paste without change de buffer')
+
+map({"n","v"}, "<leader>y", [["+y]], 'Copy to the clipboard')
+map({"n", "v"}, "<leader>d", "\"_d", 'Delete to the void')
