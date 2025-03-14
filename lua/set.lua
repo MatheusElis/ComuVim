@@ -18,6 +18,8 @@ vim.wo.number = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+vim.opt.swapfile = false
+vim.opt.backup = false
 -- Save undo history
 vim.o.undofile = true
 
