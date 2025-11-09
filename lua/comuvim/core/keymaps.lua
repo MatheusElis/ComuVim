@@ -1,5 +1,5 @@
 local function map(m, k, v, d)
-	vim.keymap.set(m, k, v, { silent = true, desc = d })
+    vim.keymap.set(m, k, v, { silent = true, desc = d })
 end
 
 -- Normal Keymaps --
@@ -31,4 +31,3 @@ map("x", "<leader>p", [["_dP"]], 'Paste without change de buffer')
 
 map({"n","v"}, "<leader>y", [["+y]], 'Copy to the clipboard')
 map({"n", "v"}, "<leader>d", "\"_d", 'Delete to the void')
-

@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
 
@@ -28,7 +27,6 @@ vim.o.timeoutlen = 300
 
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
 
 vim.opt.cursorline = true
 
