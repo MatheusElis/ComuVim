@@ -19,4 +19,3 @@ require("lazy").setup({ { import = "comuvim.plugins" }, { import = "comuvim.plug
     notify = false,
   },
 })
-
