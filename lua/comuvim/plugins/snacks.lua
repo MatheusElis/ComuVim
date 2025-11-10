@@ -47,7 +47,7 @@ return {
         },
       },
       explorer = { enabled = true },
-      indent = { enabled = false },
+      indent = { char = "." },
       input = {
         enabled = true,
         icon = " ",
@@ -78,7 +78,7 @@ return {
       },
       styles = {
         notification = {
-          -- wo = { wrap = true } -- Wrap notifications
+          wo = { wrap = true }, -- Wrap notifications
         },
       },
     },

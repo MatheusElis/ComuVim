@@ -13,9 +13,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({ { import = "comuvim.plugins" }, { import = "comuvim.plugins.lsp" } }, {
   checker = {
     enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false,
   },
 })
